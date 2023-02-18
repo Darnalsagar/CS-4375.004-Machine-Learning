@@ -9,5 +9,5 @@ It is my course work of Spring 2023.
 [Link to DataExploration.cpp (source code)](https://github.com/Darnalsagar/CS-4375.004-Machine-Learning/blob/06572c56ecec32c6f7a50f68f7294b8da95cadb1/DataExploration.cpp)
 
 ## Assignment 3: Linear Models
-[Link to Regression.pdf](https://github.com/Darnalsagar/CS-4375.004-Machine-Learning/blob/db8fcdbc73f8f01c8109dd7255d1ca7eb450f602/Regression.pdf)
+[Link to Regression.pdf](https://github.com/Darnalsagar/CS-4375.004-Machine-Learning/blob/db8fcdbc73f8f01c8109dd7255d1ca7eb450f602/Regression.pdf)<br>
 [Link to Classification.pdf](https://github.com/Darnalsagar/CS-4375.004-Machine-Learning/blob/db8fcdbc73f8f01c8109dd7255d1ca7eb450f602/Classification.pdf)
