@@ -11,3 +11,8 @@ It is my course work of Spring 2023.
 ## Assignment 3: Linear Models
 [Link to Regression.pdf](https://github.com/Darnalsagar/CS-4375.004-Machine-Learning/blob/db8fcdbc73f8f01c8109dd7255d1ca7eb450f602/Regression.pdf)<br>
 [Link to Classification.pdf](https://github.com/Darnalsagar/CS-4375.004-Machine-Learning/blob/db8fcdbc73f8f01c8109dd7255d1ca7eb450f602/Classification.pdf)
+
+## Assignment 4: ML Algorithms from Scratch
+[Link to Document for ML Algorithm.pdf](https://github.com/Darnalsagar/CS-4375.004-Machine-Learning/blob/a799495f9d0b3a43a797f76f64f1a484a08f90d3/updated_A4doc.pdf)<br>
+[Link to C++ file](https://github.com/Darnalsagar/CS-4375.004-Machine-Learning/blob/a799495f9d0b3a43a797f76f64f1a484a08f90d3/A4.c)<br>
+[Link to supporting file for c++](https://github.com/Darnalsagar/CS-4375.004-Machine-Learning/blob/8247407f19b8b06b4de60d73d0f7301bd8ff89fd/titanic_project.csv)<br>
