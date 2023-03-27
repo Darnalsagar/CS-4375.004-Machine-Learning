@@ -16,3 +16,6 @@ It is my course work of Spring 2023.
 [Link to Document for ML Algorithm.pdf](https://github.com/Darnalsagar/CS-4375.004-Machine-Learning/blob/a799495f9d0b3a43a797f76f64f1a484a08f90d3/updated_A4doc.pdf)<br>
 [Link to C++ file](https://github.com/Darnalsagar/CS-4375.004-Machine-Learning/blob/a799495f9d0b3a43a797f76f64f1a484a08f90d3/A4.c)<br>
 [Link to supporting file for c++](https://github.com/Darnalsagar/CS-4375.004-Machine-Learning/blob/8247407f19b8b06b4de60d73d0f7301bd8ff89fd/titanic_project.csv)<br>
+
+## Assignment 5: Searching for Similarity - Report of Manager
+[Link to Document for Report of Manager.pdf](https://github.com/Darnalsagar/CS-4375.004-Machine-Learning/blob/fa476f5587262cd85a2202e519ea497a627dd80d/Searching%20for%20Similarity-%20Manager%20.pdf)
