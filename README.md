@@ -28,6 +28,6 @@ It is my course work of Spring 2023.
 [Link to Document for Classification test's PDF file](https://github.com/Darnalsagar/CS-4375.004-Machine-Learning/blob/4ed4d59f0c972dde6067c354530e050213d9aefd/Project_2_Classification.pdf)
 
 [Link to Document for Clustering test's RMD file](https://github.com/Darnalsagar/CS-4375.004-Machine-Learning/blob/4ed4d59f0c972dde6067c354530e050213d9aefd/Portfolio%20-%20Clustering%20Similarity%20Notebook.Rmd)
-[Link to Document for Clustering HTML file)(https://github.com/Darnalsagar/CS-4375.004-Machine-Learning/blob/4ed4d59f0c972dde6067c354530e050213d9aefd/Portfolio%20-%20Clustering%20Similarity%20Notebook.nb.html)
+[Link to Document for Clustering HTML file](https://github.com/Darnalsagar/CS-4375.004-Machine-Learning/blob/4ed4d59f0c972dde6067c354530e050213d9aefd/Portfolio%20-%20Clustering%20Similarity%20Notebook.nb.html)
 [Link to Document for Dimensionality reduction test's RMD file](https://github.com/Darnalsagar/CS-4375.004-Machine-Learning/blob/4ed4d59f0c972dde6067c354530e050213d9aefd/sae.Rmd)
 [Link to Document for Dimensionality reduction test's PDF file](https://github.com/Darnalsagar/CS-4375.004-Machine-Learning/blob/4ed4d59f0c972dde6067c354530e050213d9aefd/sae.pdf)
