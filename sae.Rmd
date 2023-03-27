@@ -1,0 +1,80 @@
+---
+title: "proj_section4"
+output:
+  html_document:
+    df_print: paged
+  html_notebook: default
+  pdf_document: default
+date: "2023-03-25"
+---
+
+Preprocess data.
+
+```{r, include=FALSE}
+options(tinytex.verbose = TRUE)
+```
+
+
+```{r}
+set.seed(0)
+library(MASS)
+library(caret)
+library(compiler)
+library(Metrics)
+enableJIT(level = 3)
+
+df <- read.csv('unpopular_songs.csv')
+df$explicit <- as.integer(factor(df$explicit))-1
+split <- sample(1:length(df[,1]), length(df[,1])*0.8, replace=FALSE)
+train <- df[split,]
+test <- df[-split,]
+```
+KNNReg reproduction
+
+```{r}
+knn <- knnreg(train[,1:13], train$popularity, k = 50)
+preds <- predict(knn, test[,1:13])
+print(paste("repro knn corr =", cor(preds, test$popularity)))
+print(paste("repro knn mse =", mean((preds- test$popularity)^2)))
+print(paste("repro knn acc =", accuracy(test$popularity, preds)))
+```
+
+# PCA
+
+```{r}
+pca <- preProcess(train[,1:14], method=c('pca'))
+pca
+pca_train <- predict(pca, train[,])
+pca_test <- predict(pca, test[,])
+df_pca_train <- data.frame(pca_train[,5:14], train$popularity)
+df_pca_test <- data.frame(pca_test[,5:14], test$popularity)
+```
+
+KNN Regression through the PCA
+
+```{r}
+fit <- knnreg(df_pca_train[,], train$popularity, k=50)
+preds <- predict(fit, df_pca_test[,])
+print(paste("mse =",mean((preds-test$popularity)^2)))
+print(paste("correlation =",cor(preds,test$popularity)))
+print(paste("acc =", accuracy(test$popularity, preds)))
+```
+
+This seems to somehow increase the correlation and decrease the mse, so PCA has increased the accuracy of the model and not decreased it.
+
+# LDA
+
+The dataframe is reduced due to the processing power required.
+
+```{r}
+small_df <- df[1:1000,1:14]
+split <- sample(1:length(small_df[,1]), length(small_df[,1])*0.8, replace=FALSE)
+small_train <- small_df[split,]
+small_test <- small_df[-split,]
+lda <- lda(small_train$popularity~., data=small_train)
+lda_pred <- predict(lda, newdata=small_test, type='class')
+print(paste("correct =",mean(lda_pred$class==small_test$popularity)))
+print(paste("acc =", accuracy(small_test$popularity, lda_pred$class)))
+```
+
+This also seems to have increased the accuracy from phase 1 in particular. I don't know why each of these increased the accuracy of each worked.

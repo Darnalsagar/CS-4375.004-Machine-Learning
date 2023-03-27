@@ -1,0 +1,136 @@
+---
+title: "Regression"
+author: "Kyle Chan, Aidan Case, Kevin Cordano, Mason Cushing, Sagar Darnal"
+output:
+  html_document:
+    df_print: paged
+  pdf_document: default
+editor_options:
+  chunk_output_type: inline
+---
+
+This data set contains over 10,000 unpopular Spotify songs. The download link can be found [here](https://www.kaggle.com/datasets/estienneggx/spotify-unpopular-songs).
+
+---
+
+First, we begin by reading in the data set and dividing our data into an 80/20 train/test split.
+
+```{r}
+unpopular_songs <- read.csv('unpopular_songs.csv')
+
+set.seed(1234)
+train_index <- sample(1:nrow(unpopular_songs), size = 0.8*nrow(unpopular_songs), replace = FALSE)
+train <- unpopular_songs[train_index, ]
+test <- unpopular_songs[-train_index, ]
+```
+
+---
+
+## Linear Regression
+Next, take in variables and return a linear regression model that predicts popularity. We will also print the summary.
+
+```{r}
+lm1 <- lm(popularity ~ danceability+energy+key+key+loudness+speechiness+acousticness+liveness+valence+tempo+duration_ms, data = train)
+summary(lm1)
+par(mfrow=c(1,1))
+plot(fitted(lm1), resid(lm1), main = 'Linear Regression')
+```
+
+Let's determine correlation and calculate MSE/RMSE.
+
+```{r}
+pred1 <- predict(lm1, test)
+cor1 <- cor(pred1, test$popularity)
+mse1 <- mean((pred1 - test$popularity)^2)
+rmse1 <- sqrt(mse1)
+print(paste("Correlation: ", cor1))
+print(paste("MSE: ", mse1))
+print(paste("RMSE: ", rmse1))
+```
+
+The correlation here is low, and the MSE/RMSE are both high. We can conclude that the predictors have little correlation and effect on the target variable, popularity.
+
+---
+
+## kNN Regression
+Next, we will use kNN regression to predict popularity. We will use the same predictors as the linear regression model. First, we will demonstrate how KNN Regression fares without scaling. It should be noted that since, our data set also includes columns meant for classification, we will need to omit them from our train/test.
+
+```{r}
+library(caret)
+knn1 <- knnreg(train[, c(1, 2, 4, 6:12)], train[, 14], k = 50)
+pred1 <- predict(knn1, test[, c(1, 2, 4, 6:12)])
+cor1 <- cor(pred1, test[, 14])
+mse1 <- mean((pred1 - test[, 14])^2)
+rmse1 <- sqrt(mse1)
+print(paste("Correlation: ", cor1))
+print(paste("MSE: ", mse1))
+print(paste("RMSE: ", rmse1))
+```
+
+We will now scale our data for KNN Regression. Scaling our data will improve a number of factors: 
+
+- Since kNN Regression uses a distance metric to calculate similarity, we want to ensure all features in our data set contribute equally to the distance calculation. 
+- kNN Regression is very sensitive to the scale of the input. Therefore, if we do not scale, our data may take longer to converge, if at all.
+- Scaling assists in improving accuracy by normalizing the different scales of each feature and our target variable. It will make identifying patterns much easier in our data set.
+
+```{r}
+train_scaled <- train[, c(1, 2, 4, 6:12)]
+means <- sapply(train_scaled, mean)
+sds <- sapply(train_scaled, sd)
+train_scaled <- scale(train_scaled, center = means, scale = sds)
+test_scaled <- scale(test[, c(1, 2, 4, 6:12)], center = means, scale = sds)
+```
+
+
+```{r}
+knn2 <- knnreg(train_scaled, train$popularity, k = 50)
+pred2 <- predict(knn2, test_scaled)
+cor2 <- cor(pred2, test$popularity)
+mse2 <- mean((pred2 - test$popularity)^2)
+rmse2 <- sqrt(mse2)
+print(paste("Correlation: ", cor2))
+print(paste("MSE: ", mse2))
+print(paste("RMSE: ", rmse2))
+```
+
+We can see that scaled is evidently better than unscaled in kNN Regression. Scaling has doubles our correlation value, and decreases the mse by a value of 1. We have experimented with K, and determined that our correlation value increases as K approaches 50. Even with this method of regression, however, we've concluded the predictors have little impact on our target variable, since the correlation and mse values are fairly insignificant.
+
+---
+
+## Decision Trees
+Next, we will use decision trees to predict popularity.
+
+```{r}
+library(MASS)
+library(tree)
+
+tree1 <- tree(popularity ~ danceability+energy+key+key+loudness+speechiness+acousticness+liveness+valence+tempo+duration_ms, data = train)
+summary(tree1)
+plot(tree1, main = "Tree")
+text(tree1)
+```
+
+```{r}
+pred1 <- predict(tree1, test)
+cor1 <- cor(pred1, test$popularity)
+mse1 <- mean((pred1 - test$popularity)^2)
+rmse1 <- sqrt(mse1)
+print(paste("Correlation: ", cor1))
+print(paste("MSE: ", mse1))
+print(paste("RMSE: ", rmse1))
+```
+
+```{r}
+cv_tree <- cv.tree(tree1)
+plot(cv_tree$size, cv_tree$dev, type = "b", xlab = "Tree Size", ylab = "Mean Squared Error", main = "Cross Validation")
+```
+
+The decision tree is not as useful for this data set. The tree does not perform well predicting the target variable, since decision trees work by creating small decision rules that can predict the target variable.
+
+---
+
+## Analysis and Closing Thoughts
+
+Overall, we see poor results across all algorithms for this data set. Linear regression performs poorly due to the simplicity of which the data is analyzed, since it just attempts to fit a line between the predictors and the target variable. kNN regression performed the best, albeit not by much, with the greatest correlation value. Our kNN regression model seemed to struggle due to the difficulty in identifying similar data points to the query point, resulting in less accuracy. Decision trees resulted in the worst performance. Since there are no clear patterns or relationships between the input features and the target variable, the algorithm struggles to identify significant splits and decision rules. 
+
+All 3 algorithms are supervised ML algorithms with unique approaches and usefulness in varying circumstances. Linear regression may be useful when there is a linear relationship between the predictors and the target variable. kNN regression is useful in handling non-linear (or those that appear not to be) relationships beteen its input features and the target variable. Decision trees are useful when there are more complex relationships between the features and the target variable. Additionally, decision trees are capable of handling categorical and numerical data at the same time. In the future, we will take greater care in identifying a data set with higher correlation so that the algorithms may truly demonstrate their potential.
