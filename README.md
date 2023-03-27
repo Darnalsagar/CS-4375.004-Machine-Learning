@@ -21,3 +21,13 @@ It is my course work of Spring 2023.
 (It is a group project where I represent as a Manager)
 [Link to Document for Report of Manager.pdf](https://github.com/Darnalsagar/CS-4375.004-Machine-Learning/blob/fa476f5587262cd85a2202e519ea497a627dd80d/Searching%20for%20Similarity-%20Manager%20.pdf)
 
+[Link to Document for Regression test's RMD file](https://github.com/Darnalsagar/CS-4375.004-Machine-Learning/blob/4ed4d59f0c972dde6067c354530e050213d9aefd/Regression.rmd)
+[Link to Document for Regression test's PDF file](https://github.com/Darnalsagar/CS-4375.004-Machine-Learning/blob/4ed4d59f0c972dde6067c354530e050213d9aefd/Regression.pdf)
+
+[Link to Document for Classification test's RMD file](https://github.com/Darnalsagar/CS-4375.004-Machine-Learning/blob/4ed4d59f0c972dde6067c354530e050213d9aefd/Project_2_Classification.Rmd)
+[Link to Document for Classification test's PDF file](https://github.com/Darnalsagar/CS-4375.004-Machine-Learning/blob/4ed4d59f0c972dde6067c354530e050213d9aefd/Project_2_Classification.pdf)
+
+[Link to Document for Clustering test's RMD file](https://github.com/Darnalsagar/CS-4375.004-Machine-Learning/blob/4ed4d59f0c972dde6067c354530e050213d9aefd/Portfolio%20-%20Clustering%20Similarity%20Notebook.Rmd)
+[Link to Document for Clustering HTML file)(https://github.com/Darnalsagar/CS-4375.004-Machine-Learning/blob/4ed4d59f0c972dde6067c354530e050213d9aefd/Portfolio%20-%20Clustering%20Similarity%20Notebook.nb.html)
+[Link to Document for Dimensionality reduction test's RMD file](https://github.com/Darnalsagar/CS-4375.004-Machine-Learning/blob/4ed4d59f0c972dde6067c354530e050213d9aefd/sae.Rmd)
+[Link to Document for Dimensionality reduction test's PDF file](https://github.com/Darnalsagar/CS-4375.004-Machine-Learning/blob/4ed4d59f0c972dde6067c354530e050213d9aefd/sae.pdf)
