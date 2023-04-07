@@ -33,3 +33,7 @@ It is my course work of Spring 2023.
 [Link to Document for Dimensionality reduction test's RMD file](https://github.com/Darnalsagar/CS-4375.004-Machine-Learning/blob/4ed4d59f0c972dde6067c354530e050213d9aefd/sae.Rmd)<br>
 [Link to Document for Dimensionality reduction test's PDF file](https://github.com/Darnalsagar/CS-4375.004-Machine-Learning/blob/4ed4d59f0c972dde6067c354530e050213d9aefd/sae.pdf)
 <br><br>
+
+## Assignment 6: ML with sklearn
+[Link to analysis PDF file](https://github.com/Darnalsagar/CS-4375.004-Machine-Learning/blob/e702d3a2b4ea212c47e5790140d1d38776e619ff/assignment6.pdf)<br>
+[Link to Python file](https://github.com/Darnalsagar/CS-4375.004-Machine-Learning/blob/e702d3a2b4ea212c47e5790140d1d38776e619ff/Portfolio_Assignment_ML_with_sklearn.ipynb)<br>
