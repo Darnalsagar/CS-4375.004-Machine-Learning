@@ -37,3 +37,7 @@ It is my course work of Spring 2023.
 ## Assignment 6: ML with sklearn
 [Link to analysis PDF file](https://github.com/Darnalsagar/CS-4375.004-Machine-Learning/blob/e702d3a2b4ea212c47e5790140d1d38776e619ff/assignment6.pdf)<br>
 [Link to Python file](https://github.com/Darnalsagar/CS-4375.004-Machine-Learning/blob/e702d3a2b4ea212c47e5790140d1d38776e619ff/Portfolio_Assignment_ML_with_sklearn.ipynb)<br>
+
+## Assignment 7: Image Classification
+[Link to analysis PDF file](https://github.com/Darnalsagar/CS-4375.004-Machine-Learning/blob/6b3bf874ad8c8e60e46d7a9f9a09b40e2332cf5d/fashion_mnist.pdf)<br>
+[Link to code file](https://github.com/Darnalsagar/CS-4375.004-Machine-Learning/blob/6b3bf874ad8c8e60e46d7a9f9a09b40e2332cf5d/fashion_mnist.ipynb)
