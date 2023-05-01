@@ -42,4 +42,7 @@ It is my course work of Spring 2023.
 [Link to analysis PDF file](https://github.com/Darnalsagar/CS-4375.004-Machine-Learning/blob/6b3bf874ad8c8e60e46d7a9f9a09b40e2332cf5d/fashion_mnist.pdf)<br>
 [Link to code file](https://github.com/Darnalsagar/CS-4375.004-Machine-Learning/blob/6b3bf874ad8c8e60e46d7a9f9a09b40e2332cf5d/fashion_mnist.ipynb)<br>
 
+## Portfolio Wrapup: Technical Skills and Soft Skills
+[Link to skill set]<https://github.com/Darnalsagar/CS-4375.004-Machine-Learning/blob/7d37b9d2310eeae10db1bd46b86dd4dbad2793ff/SkillSets.pdf>
+
 I have basic to advanced technical knowledge of machine learning, according to my skill set. My newfound knowledge made me realize how powerful artificial intelligence is based on what I had learned. I developed some expertise in regression, neural networks, classification, and other areas, and even created some simple models to forecast the outcome. Yes, that was really fascinating. I am now starting to understand the AI that we are currently using, such as chatGPT, mid-journey, and other amazing AI models that are becoming more and more well-known every day. NLP, reinforcement learning, and CNN, which I think is really fascinating, have my interest. I did some study on it and am now quite motivated. As a result, I plan to use these topics in future in my personal projects or to some product that I can use to contribute my to the this rapidly changing world. So if I could excel in these fields, I can secure my job or may be start my project and hire some, if it interest the world.
